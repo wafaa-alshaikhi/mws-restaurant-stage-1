@@ -44,7 +44,7 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
   color: #aaa;
   font-size: 8pt;
   letter-spacing: 1px;
-  padding: 25px;
+  padding: 8%;
   text-align: center;
   text-transform: uppercase;
 }
@@ -273,3 +273,19 @@ nav h1 a {
 #restaurant-hours td {
   color: #666;
 }
+
+/* smartphones, portrait iPhone, portrait 480x320 phones (Android) */ 
+@media (min-width:320px)  {
+
+}
+
+
+/* tablet, landscape iPad, lo-res laptops ands desktops */
+@media (min-width:801px)  { 
+
+}
+
+/* hi-res laptops and desktops */
+    @media (min-width:1281px) { 
+    }
+    
