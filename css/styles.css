@@ -297,24 +297,26 @@ nav h1 a {
 /* tablet, landscape iPad, lo-res laptops ands desktops */
 @media (min-width:768px)  { 
   .filter-options h2 {
-    padding-top: 65%;
+    padding-top: 99%;
     font-size: 3.5rem;
-    line-height: 232%;
+    line-height: 121%;
     letter-spacing: 4px;
-    margin: 0 20px;
-    width: 34%;
-    -webkit-appearance: radio;
-}
+    margin: 53px 56px;
+    width: 0%;
+    -webkit-appearance: radio;}
+
 .filter-options select {
-  font-family: sans-serif;
-  font-size: 15pt;
-  height: 61px;
-  margin: 15px;
-  padding: 0 10px;
-  width: 217px;
-  margin-left: 26%;
-  margin-top: 1%;
+ font-family: sans-serif;
+    font-size: 15pt;
+    height: 89px;
+    margin: -4px;
+    padding: 0 10px;
+    width: 245px;
+    margin-left: 34%;
+   
 }
+
+
 #cuisines-select{
   margin-left: 5px;
 }
