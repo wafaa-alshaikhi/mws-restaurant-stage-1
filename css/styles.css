@@ -191,6 +191,8 @@ nav h1 a {
 }
 
 /* ====================== Restaurant Details ====================== */
+
+
 .inside header {
   position: fixed;
   top: 0;
@@ -282,6 +284,10 @@ nav h1 a {
   color: #666;
 }
 
+#map-container #restaurant-container{
+display: inline-block;
+}
+
 
 /* ====================== media Details ====================== */
 
@@ -291,6 +297,15 @@ nav h1 a {
   #restaurants-list li {
     height: 510px;
   }
+  .inside header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+
+
+  
 }
 
 
