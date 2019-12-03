@@ -8,28 +8,27 @@
 </head>
 
 <body>
-  <header>
+  <header  tabindex="0">
     <nav>
       <h1><a href="/">Restaurant Reviews</a></h1>
     </nav>
   </header>
 
   <main id="maincontent">
-    <section id="map-container">
+    <section id="map-container" aria-role="Hi im so happy">
       <div id="map"></div>
     </section>
     <section>
-      <div class="filter-options">
+      <div class="filter-options" tabindex="0">
         <h2>Filter Results</h2>
-        <select id="neighborhoods-select" name="neighborhoods" onchange="updateRestaurants()">
-          <option value="all">All Neighborhoods</option>
+        <select id="neighborhoods-select" name="neighborhoods"  aria-label="neighborhoods list" onchange="updateRestaurants()">
+          <option   value="all">All Neighborhoods</option>
         </select>
-        <select id="cuisines-select" name="cuisines" onchange="updateRestaurants()">
-          <option value="all">All Cuisines</option>
+        <select id="cuisines-select" name="cuisines" aria-label="cuisines list"  onchange="updateRestaurants()">
+          <option  aria-selected="true" value="all">All Cuisines</option>
         </select>
       </div>
-      <ul id="restaurants-list"></ul>
-      
+      <ul tabindex="0" id="restaurants-list" aria-label="Resturany List "></ul>
     </section>
   </main>
 

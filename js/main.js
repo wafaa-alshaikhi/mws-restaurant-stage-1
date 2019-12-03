@@ -35,6 +35,7 @@ fillNeighborhoodsHTML = (neighborhoods = self.neighborhoods) => {
     const option = document.createElement('option');
     option.innerHTML = neighborhood;
     option.value = neighborhood;
+    option.name=option.value+`option`;
     select.append(option);
   });
 }
@@ -143,6 +144,8 @@ createRestaurantHTML = (restaurant) => {
   image.src = DBHelper.imageUrlForRestaurant(restaurant);
   image.alt=`${restaurant.name} Resturant`
   image.tabIndex=0;
+  //image.srcset= DBHelper.imageUrlForRestaurant(restaurant)+``;
+  
   li.append(image);
   
 
@@ -157,11 +160,14 @@ createRestaurantHTML = (restaurant) => {
   const address = document.createElement('p');
   address.innerHTML = restaurant.address;
   li.append(address);
+  
 
   const more = document.createElement('a');
   more.innerHTML = 'View Details';
   more.href = DBHelper.urlForRestaurant(restaurant);
   li.append(more)
+
+ 
 
   return li
 }
