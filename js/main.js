@@ -35,7 +35,6 @@ fillNeighborhoodsHTML = (neighborhoods = self.neighborhoods) => {
     const option = document.createElement('option');
     option.innerHTML = neighborhood;
     option.value = neighborhood;
-    option.name=option.value+`option`;
     select.append(option);
   });
 }
@@ -145,7 +144,6 @@ createRestaurantHTML = (restaurant) => {
   image.alt=`${restaurant.name} Resturant`
   image.tabIndex=0;
   //image.srcset= DBHelper.imageUrlForRestaurant(restaurant)+``;
-  
   li.append(image);
   
 
@@ -160,15 +158,10 @@ createRestaurantHTML = (restaurant) => {
   const address = document.createElement('p');
   address.innerHTML = restaurant.address;
   li.append(address);
-  
-
   const more = document.createElement('a');
   more.innerHTML = 'View Details';
   more.href = DBHelper.urlForRestaurant(restaurant);
   li.append(more)
-
- 
-
   return li
 }
 
@@ -183,5 +176,23 @@ addMarkersToMap = (restaurants = self.restaurants) => {
       window.location.href = marker.url
     });
     self.markers.push(marker);
+  });
+}
+
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('./js/sw/sw.js')
+  .then((reg) => {
+    // registration worked
+    if(reg.installing) {
+      console.log('Service worker installing');
+    } else if(reg.waiting) {
+      console.log('Service worker installed');
+    } else if(reg.active) {
+      console.log('Service worker active');
+}
+    console.log('Registration succeeded. Scope is ' + reg.scope);
+  }).catch((error) => {
+    // registration failed
+    console.log('Registration failed with ' + error);
   });
 }
